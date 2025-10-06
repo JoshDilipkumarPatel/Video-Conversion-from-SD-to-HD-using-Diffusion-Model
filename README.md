@@ -38,19 +38,22 @@ The pipeline is designed to be **modular, efficient, and capable of producing st
 
 ### 📂 Project Structure
 ```
+|── README.md              # Project Documentation
+├── upscale.py             # Core script for video upscaling
+├── requirements.txt       # Required Python packages
+├── models/                # Folder for trained model weights (.pth)
+├── input_videos/          # Folder for your input SD videos
+└── output_videos/         # Folder for the final HD output videos
+```
 
-|── README.md              \# Project Documentation
-├── Video_upscale.py       \# Core Code
-
-````
 ***
 
 ### ⚡ Getting Started
 
 1.  **Clone the repository**
     ```sh
-    git clone [https://github.com/YourUsername/AI-Video-Upscaler.git](https://github.com/YourUsername/AI-Video-Upscaler.git)
-    cd AI-Video-Upscaler
+    git clone https://github.com/JoshDilipkumarPatel/Video-Conversion-from-SD-to-HD-using-Diffusion-Model.git
+    cd Video-Conversion-from-SD-to-HD-using-Diffusion-Model
     ```
 
 2.  **Install dependencies**
@@ -80,8 +83,8 @@ The pipeline is designed to be **modular, efficient, and capable of producing st
 Execute the main script from the terminal, specifying the input video and model.
 
 ```sh
-python video_upscale.py --input_video input_videos/my_video_sd.mp4 --model_path models/model.pth
-````
+python upscale.py --input_video input_videos/my_video_sd.mp4 --model_path models/model.pth
+```
 
 The final HD video will be saved in the `output_videos/` directory.
 
@@ -107,7 +110,4 @@ The script will output progress to the console and produce a high-quality video 
   * **Model Comparison:** Benchmark against other super-resolution models like ESRGAN or SwinIR.
   * **Real-time Processing:** Explore model quantization and optimization for live video streams.
 
-<!-- end list -->
-
-```
-```
+-----
