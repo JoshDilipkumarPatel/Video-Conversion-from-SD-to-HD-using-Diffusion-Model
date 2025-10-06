@@ -39,11 +39,7 @@ The pipeline is designed to be **modular, efficient, and capable of producing st
 ### 📂 Project Structure
 ```
 |── README.md              # Project Documentation
-├── upscale.py             # Core script for video upscaling
-├── requirements.txt       # Required Python packages
-├── models/                # Folder for trained model weights (.pth)
-├── input_videos/          # Folder for your input SD videos
-└── output_videos/         # Folder for the final HD output videos
+├── video_upscale.py       # Core Code
 ```
 
 ***
@@ -57,10 +53,7 @@ The pipeline is designed to be **modular, efficient, and capable of producing st
     ```
 
 2.  **Install dependencies**
-    ```sh
-    pip install -r requirements.txt
-    ```
-    The `requirements.txt` file should contain:
+    The `requirements` file should contain:
     ```
     torch
     torchvision
@@ -70,10 +63,7 @@ The pipeline is designed to be **modular, efficient, and capable of producing st
     Pillow
     ```
 
-3.  **Download the Pre-trained Model**
-    Place your trained model file (e.g., `model.pth`) into the `models/` directory.
-
-4.  **Add Your Video**
+3.  **Add Your Video**
     Place the SD video you want to upscale (e.g., `my_video_sd.mp4`) into the `input_videos/` folder.
 
 ***
@@ -83,7 +73,7 @@ The pipeline is designed to be **modular, efficient, and capable of producing st
 Execute the main script from the terminal, specifying the input video and model.
 
 ```sh
-python upscale.py --input_video input_videos/my_video_sd.mp4 --model_path models/model.pth
+python video_upscale.py --input_video input_videos/my_video_sd.mp4 --model_path models/model.pth
 ```
 
 The final HD video will be saved in the `output_videos/` directory.
